@@ -331,5 +331,4 @@ MIT — see [LICENSE](LICENSE)
 <p align="center">
   Developed under <b>GANGA Offensive Ops</b><br/>
   <b>Bhanu Guragain</b> — Lead Developer & Author<br/>
-  <em>#1 Nepal / Top 100 Global on Hack The Box</em>
 </p>
