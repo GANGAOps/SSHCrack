@@ -23,7 +23,7 @@
 
 ## Why SHCrack?
 
-SHCrack is the **only open-source tool** that can crack PuTTY PPK v3 (Argon2id) keys. John the Ripper and Hashcat have no support for this format.
+SHCrack is the **only open-source tool** that can crack PuTTY PPK v3 (Argon2id) keys.
 
 ### Format Support Comparison
 
@@ -58,27 +58,6 @@ SHCrack is the **only open-source tool** that can crack PuTTY PPK v3 (Argon2id) 
 
 ---
 
-## Install
-
-```bash
-# Core (CPU only)
-pip install sshcrack
-
-# With GPU support (NVIDIA)
-pip install "sshcrack[gpu-cuda]"
-
-# With PPK v3 / Argon2id support
-pip install "sshcrack[ppk-v3]"
-
-# With distributed cracking
-pip install "sshcrack[distributed]"
-
-# Everything
-pip install "sshcrack[all]"
-```
-
----
-
 ## Quick Start
 
 ```bash
@@ -99,7 +78,7 @@ python3 -m sshcrack -k id_ed25519 -w rockyou.txt --mask '?d?d?d'
 
 <p align="center">
   <img src="images/image_4.png" alt="Wordlist Attack" width="700"/><br/>
-  <em>Wordlist attack — PPK v3 key cracked in 62s</em>
+  <em>Wordlist attack — PPK v3 key</em>
 </p>
 
 <p align="center">
@@ -109,44 +88,8 @@ python3 -m sshcrack -k id_ed25519 -w rockyou.txt --mask '?d?d?d'
 
 <p align="center">
   <img src="images/image_2.png" alt="OpenSSH Attack" width="700"/><br/>
-  <em>OpenSSH bcrypt key with mutation rules</em>
+  <em>OpenSSH bcrypt key</em>
 </p>
-
-<p align="center">
-  <img src="images/image_1.png" alt="Rockyou Attack" width="700"/><br/>
-  <em>Full rockyou.txt wordlist attack</em>
-</p>
-
----
-
-## Performance Benchmarks
-
-Measured on real hardware. PPK v3 uses Argon2id (mem=8192k, ops=21) which is intentionally slow — that's the point of key stretching.
-
-### PPK v3 (Argon2id) — Real-World Data
-
-| Setup | Speed | rockyou.txt (14M) ETA |
-|-------|------:|----------------------:|
-| RTX 3050 + 16-core CPU | 8.3 pw/s | ~19.5 days |
-| RTX 4090 + 32-core CPU | ~45 pw/s | ~3.6 days |
-| 4× RTX 4090 distributed | ~180 pw/s | ~21.6 hours |
-
-### OpenSSH bcrypt-16 — Fast Format
-
-| Setup | Speed | rockyou.txt (14M) ETA |
-|-------|------:|----------------------:|
-| 16-core CPU | ~75,000 pw/s | ~3 min |
-| RTX 3050 (CUDA) | ~50,000 pw/s | ~4.7 min |
-| RTX 4090 (CUDA) | ~200,000 pw/s | ~72 sec |
-| 4× RTX 4090 distributed | ~800,000 pw/s | ~18 sec |
-
-### Legacy PEM (DES-EDE3/AES-128) — Fastest Format
-
-| Setup | Speed | rockyou.txt (14M) ETA |
-|-------|------:|----------------------:|
-| 16-core CPU | ~2,000,000 pw/s | <10 sec |
-
-See [docs/BENCHMARKS.md](docs/BENCHMARKS.md) for full hardware matrix.
 
 ---
 
