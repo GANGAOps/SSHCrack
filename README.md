@@ -21,30 +21,6 @@
 
 ---
 
-## Why SHCrack?
-
-SHCrack is the **only open-source tool** that can crack PuTTY PPK v3 (Argon2id) keys.
-
-### Format Support Comparison
-
-| Format | SHCrack | John the Ripper | Hashcat |
-|--------|:-------:|:---------------:|:-------:|
-| OpenSSH Ed25519 (bcrypt) | ✅ | ✅ | ❌ |
-| OpenSSH RSA (bcrypt) | ✅ | ✅ | ❌ |
-| OpenSSH ECDSA (bcrypt) | ✅ | ✅ | ❌ |
-| OpenSSH DSA (bcrypt) | ✅ | ✅ | ❌ |
-| Legacy PEM (DES-EDE3/AES) | ✅ | ✅ | ❌ |
-| PuTTY PPK v2 (SHA-1) | ✅ | ✅ | ❌ |
-| **PuTTY PPK v3 (Argon2id)** | **✅** | **❌** | **❌** |
-| GPU acceleration | ✅ CUDA/OpenCL | ✅ OpenCL | ✅ CUDA/OpenCL |
-| Distributed cracking | ✅ ZeroMQ | ❌ | ❌ |
-| Session resume | ✅ | ✅ | ✅ |
-| Rule engine | ✅ Hashcat-compatible | ✅ | ✅ |
-| Mask attack | ✅ | ✅ | ✅ |
-| Smart ordering (breach freq) | ✅ | ❌ | ❌ |
-
----
-
 ## Features
 
 - **7 key formats**: OpenSSH (Ed25519, RSA, ECDSA, DSA) + Legacy PEM + PuTTY PPK v2/v3
@@ -75,6 +51,12 @@ python3 -m sshcrack -k id_ed25519 -w rockyou.txt --mask '?d?d?d'
 ```
 
 ### Screenshots
+
+<p align="center">
+  <img src="images/image_1.png" alt="OpenSSH Attack" width="700"/><br/>
+  <em>Progress Bar</em>
+</p>
+
 
 <p align="center">
   <img src="images/image_4.png" alt="Wordlist Attack" width="700"/><br/>
