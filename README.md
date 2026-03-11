@@ -306,7 +306,7 @@ See [SECURITY.md](SECURITY.md) for vulnerability disclosure policy.
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
 ---
 
