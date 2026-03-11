@@ -1,0 +1,28 @@
+# ssh-crack v1 — pinned dependencies
+# Generated: 2026-03-09
+# Platform: Ubuntu 24.04 LTS / Python 3.12.x
+#
+# Core (required)
+cryptography==42.0.5          # OpenSSH key parsing + AES/ChaCha20 decryption
+
+# Optional — install as needed:
+# GPU — NVIDIA CUDA
+#   pycuda==2024.1             # NVIDIA CUDA kernel compilation + dispatch
+# GPU — OpenCL (any vendor)
+#   pyopencl==2024.1           # OpenCL kernel compilation + dispatch
+# Distributed cracking
+#   pyzmq==26.0.3              # ZeroMQ PUSH/PULL/PUB sockets
+# SSH live verification
+#   paramiko==3.4.0            # SSH client for post-crack verification
+# PPK v3 (PuTTY) argon2 KDF
+#   argon2-cffi==23.1.0        # Argon2id KDF for PPK v3 keys
+
+# Dev/CI (not needed for runtime)
+# coverage==7.5.3
+# mypy==1.10.0
+# ruff==0.4.4
+# black==24.4.2
+# isort==5.13.2
+# bandit==1.7.9
+# pip-audit==2.7.3
+# pre-commit==3.7.1
