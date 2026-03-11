@@ -5,7 +5,7 @@
 <h1 align="center">SHCrack v1</h1>
 
 <p align="center">
-  <b>The World's First Open-Source PPK v3 / Argon2id SSH Key Cracker</b><br/>
+  <b>Open-Source PPK v3 / Argon2id SSH Key Cracker</b><br/>
   GPU-accelerated · Distributed · Rule-based · Session resume
 </p>
 
